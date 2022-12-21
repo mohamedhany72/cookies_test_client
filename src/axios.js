@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const { REACT_APP_SERVER_URL, REACT_APP_CLIENT_URL } = process.env;
-axios.defaults.baseURL = `${REACT_APP_SERVER_URL}/api`;
+axios.defaults.baseURL = `${REACT_APP_SERVER_URL}api`;
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 axios.defaults.headers.common["Access-Control-Allow-Origin"] =
     REACT_APP_CLIENT_URL;

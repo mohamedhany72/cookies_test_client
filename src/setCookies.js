@@ -5,7 +5,7 @@ const setRefreshCookie = (refresh) => {
     Cookies.set("refresh", refresh, {
         path: "/",
         expires: 7,
-        sameSite: "None",
+        sameSite: "none",
         secure: true,
         domain: REACT_APP_SERVER_URL
     });
@@ -13,13 +13,13 @@ const setRefreshCookie = (refresh) => {
     Cookies.set("x-sign", true, {
         expires: 7,
         path: "/",
-        sameSite: "None",
+        sameSite: "none",
         secure: true
     });
 
     Cookies.set("isLoggedIn", true, {
         path: "/",
-        sameSite: "None",
+        sameSite: "none",
         secure: true
     });
 };
@@ -28,7 +28,7 @@ const setBrowserCookie = (browser) => {
     Cookies.set("browser", browser, {
         expires: 30,
         path: "/",
-        sameSite: "None",
+        sameSite: "none",
         secure: true,
         domain: REACT_APP_SERVER_URL
     });

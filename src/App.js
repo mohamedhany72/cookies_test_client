@@ -16,9 +16,8 @@ function App() {
     const postData = async () => {
         const user = "mido is good";
         const pswd = "password";
-        const res = await API.postData(user, pswd);
+        await API.postData(user, pswd);
     };
-
 
     return (
         <div className="App">
