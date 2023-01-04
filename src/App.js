@@ -18,6 +18,11 @@ function App() {
         await API.postData(user, pswd);
     };
 
+    const removeCookies = async () => {
+        clearCookies();
+        await API.removeCookies();
+    };
+
     return (
         <div className="App">
             {/* <header className="App-header">
@@ -43,7 +48,7 @@ function App() {
                     send cookies
                 </button>
                 <hr />
-                <button className="btn btn-danger" onClick={clearCookies}>
+                <button className="btn btn-danger" onClick={removeCookies}>
                     clear cookies
                 </button>
             </div>

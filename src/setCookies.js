@@ -36,8 +36,8 @@ const setBrowserCookie = (browser) => {
 
 const clearCookies = () => {
     // alert("what")
-    Cookies.remove("browser");
-    Cookies.remove("refresh");
+    // Cookies.remove("browser");
+    // Cookies.remove("refresh");
     Cookies.remove("x-sign");
     Cookies.remove("isLoggedIn");
 };
