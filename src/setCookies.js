@@ -1,5 +1,5 @@
 import Cookies from "js-cookie";
-const { REACT_APP_SERVER_URL } = process.env;
+const { REACT_APP_SERVER_DOMAIN } = process.env;
 
 const setRefreshCookie = (refresh) => {
     Cookies.set("refresh", refresh, {
@@ -7,7 +7,7 @@ const setRefreshCookie = (refresh) => {
         expires: 7,
         sameSite: "none",
         secure: true,
-        domain: REACT_APP_SERVER_URL
+        domain: REACT_APP_SERVER_DOMAIN
     });
 
     Cookies.set("x-sign", true, {
@@ -30,7 +30,7 @@ const setBrowserCookie = (browser) => {
         path: "/",
         sameSite: "none",
         secure: true,
-        domain: REACT_APP_SERVER_URL
+        domain: REACT_APP_SERVER_DOMAIN
     });
 };
 
