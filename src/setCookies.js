@@ -1,26 +1,26 @@
 import Cookies from "js-cookie";
 const { REACT_APP_SERVER_DOMAIN } = process.env;
 
-const setRefreshCookie = (refresh) => {
-    Cookies.set("refresh", refresh, {
-        path: "/",
-        expires: 7,
-        sameSite: "none",
-        secure: true,
-        domain: REACT_APP_SERVER_DOMAIN
-    });
+const setRefreshCookie = () => {
+    // Cookies.set("refresh", refresh, {
+    //     path: "/",
+    //     expires: 7,
+    //     sameSite: "none",
+    //     secure: true,
+    //     domain: REACT_APP_SERVER_DOMAIN
+    // });
 
     Cookies.set("x-sign", true, {
         expires: 7,
-        path: "/",
-        sameSite: "none",
-        secure: true
+        path: "/"
+        // sameSite: "none",
+        // secure: true
     });
 
     Cookies.set("isLoggedIn", true, {
-        path: "/",
-        sameSite: "none",
-        secure: true
+        path: "/"
+        // sameSite: "none",
+        // secure: true
     });
 };
 

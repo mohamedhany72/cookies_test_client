@@ -1,16 +1,15 @@
-import logo from "./logo.svg";
 import "./App.css";
 import * as API from "./API";
-import { setRefreshCookie, setBrowserCookie, clearCookies } from "./setCookies";
+import { setRefreshCookie, clearCookies } from "./setCookies";
 
 function App() {
     const getCookies = async () => {
         // alert("get shitt");
         const res = await API.getCookies();
         const refresh = res?.data?.refresh;
-        const browser = res?.data?.browser;
+        // const browser = res?.data?.browser;
         setRefreshCookie(refresh);
-        setBrowserCookie(browser);
+        // setBrowserCookie(browser); setBrowserCookie,
     };
 
     const postData = async () => {
